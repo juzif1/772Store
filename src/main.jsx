@@ -11,7 +11,7 @@ import { WishlistProvider } from "./state/WishlistContext.jsx";
 /* is the entry point of a React application. */
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/772Store">
       <CartProvider>
         <WishlistProvider>
           <App />
