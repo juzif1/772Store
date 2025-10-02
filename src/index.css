@@ -1,0 +1,155 @@
+/* === M2: Code Documentation === Global styles: dark theme, grid, buttons, responsive === */
+
+
+/* The `*` selector in CSS is a universal selector that targets all elements on the page. */
+* { box-sizing: border-box; }
+
+/* is styling the `<body>` element of an HTML. */
+body { 
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0d0d0d;   
+  color: #eaeaea;
+}
+
+/* The `.container` class in the CSS code snippet provided is styling a container element in the HTML. */
+.container { 
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+
+/* This CSS code snippet is styling the `nav` and `footer` elements in the HTML. */
+nav, footer { 
+  background: #121212;
+  border-bottom: 1px solid #222;
+}
+
+/* is targeting the elements with a class of `.inner` that are nested inside `nav` and `footer` elements in the HTML. */
+nav .inner, footer .inner { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 1rem; 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+}
+
+/* is styling anchor `<a>` elements that are nested inside a `<nav>` element in the HTML. */
+nav a { 
+    color: #ff9800; 
+    font-weight: 600; 
+}
+
+/* is targeting anchor `<a>` elements that are nested inside a `<nav>` element and have a class of "active". It is styling these specific
+anchor elements by underlining the text within them when they have the "active" class applied. This
+styling effect is commonly used to visually indicate to users that a particular navigation link is
+currently active or selected. */
+nav a.active { 
+    text-decoration: underline; 
+}
+
+/* is styling anchor `<a>` elements in the HTML. */
+a { 
+    text-decoration: none; 
+    color: #ffb74d; 
+}
+
+/* The `.grid` class in the CSS code snippet provided is defining a grid layout for elements with this
+class. */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 1rem; 
+}
+
+/* is styling a card element in the HTML. */
+.card { 
+  background: #1a1a1a;   
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+  padding: 1rem;
+  display: grid; gap: .6rem;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+/*is defining the hover effect for elements with the class `.card`. When a user
+hovers over a `.card` element, the following visual changes will occur: */
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.35);
+  border-color: #ff9800;
+}
+
+.card h3 { color: #fff; font-size: 0.95rem; line-height: 1.35; }
+.card p { color: #d7d7d7; }
+
+/* is styling an image element that is a child of an element with the class `.card`. */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #0f0f0f;      /* يضمن ظهور الصورة على خلفية داكنة */
+  border-radius: 8px;
+  display: block;
+}
+
+
+/* is styling the `<button>` elements in the HTML. */
+button {
+  padding: .55rem .8rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ff9800;
+  color: #111;
+  font-weight: 700;
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+}
+
+/* is defining the styles that will be applied to a `<button>` element when
+a user hovers over it with their cursor. */
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 6px 16px rgba(255,152,0,.25);
+}
+
+/* is targeting the state when a `<button>` element is actively
+being clicked or pressed by the user. */
+button:active {
+  transform: translateY(0);        
+  filter: brightness(.98);
+  box-shadow: none;
+}
+
+/* is targeting the state of a `<button>` element when it is disabled. */
+button:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* is defining the styling for a grid layout container element. */
+.row { 
+  display: grid;
+  grid-template-columns: 1fr 110px 110px 110px;
+  align-items: center; gap: .6rem;
+  background: #1a1a1a; border: 1px solid #2a2a2a;
+  padding: .6rem 1rem; margin-bottom: .6rem; border-radius: 12px;
+}
+
+/* is styling buttons that have an `aria-label` attribute set to toggle "wishlist" and are nested inside elements with the class `.card`. */
+.card button[aria-label="toggle wishlist"] { color:#bbb; }
+.card button[aria-label="toggle wishlist"]:hover { color:#ff6b6b; }
+.card button[aria-label="toggle wishlist"].active { color:#ff6b6b; }
+.card button[aria-label="toggle wishlist"].active:hover { color:#ff3b3b; }
+
+/* is styling input elements of type "number" in the HTML. */
+input[type=number]{ padding: .4rem; border: 1px solid #ccc; border-radius: 8px; }
+
+/* is setting the minimum height of the
+`<main>` element. This ensures that the `<main>` element will take up at least the specified height on the screen. */
+main { 
+    min-height: calc(100vh - 140px); 
+}
